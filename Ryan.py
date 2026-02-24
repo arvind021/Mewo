@@ -184,7 +184,7 @@ if __name__ == '__main__':
         app_bot.add_handler(CommandHandler("unprotect", admin.unprotect))
         app_bot.add_handler(CommandHandler("cleandb", admin.cleandb))
         app_bot.add_handler(CommandHandler("update", admin.update_bot))
-        app_bot.add_handler(CallbackQueryHandler(admin.confirm_handler, pattern="^cnf\|"))
+        app_bot.add_handler(CallbackQueryHandler(admin.confirm_handler, pattern=r"^cnf\|"))
         
         # --- EVENTS & MESSAGE LISTENERS (ORDER IS CRITICAL) ---
         
